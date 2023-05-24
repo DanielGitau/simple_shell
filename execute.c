@@ -8,7 +8,6 @@
  */
 int execute(char **argv, int token_count)
 {
-	extern char **environ;
 	char *lineptr = NULL, *lineptr_cpy, *command_path = NULL;
 	int char_count;
 	pid_t child_pd;

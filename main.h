@@ -8,6 +8,7 @@
 #include <string.h>
 #include <unistd.h>
 
+extern char **environ;
 char *get_command(char **argv, char *command_path);
 char *get_location(char *command);
 int num_token(char *str);
@@ -20,4 +21,5 @@ char *_strdup(char *s);
 char *_strcat(char *destination, char *source);
 int execute(char **argv, int token_count);
 void str_split(char *str, char *argv[], int token_count);
+
 #endif
