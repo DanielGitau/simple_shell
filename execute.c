@@ -8,6 +8,7 @@
  */
 int execute(char **argv, int token_count)
 {
+	extern char **environ;
 	char *lineptr = NULL, *lineptr_cpy, *command_path = NULL;
 	int char_count;
 	pid_t child_pd;
@@ -29,7 +30,7 @@ int execute(char **argv, int token_count)
 	{
 		child_pd = fork();
 		if (child_pd == 0)
-			execve(command_path, argv, NULL);
+			execve(command_path, argv, environ);
 		wait(NULL);
 	}
 	free(command_path);
