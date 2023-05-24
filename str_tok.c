@@ -3,7 +3,7 @@
 /**
  * num_token - function to return the number of tokens
  * @str: string
- * Returns: the number of tokens
+ * Return: the number of tokens
  */
 int num_token(char *str)
 {
