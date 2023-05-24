@@ -13,8 +13,7 @@ int get_line(char **str)
 	nread_char = getline(str, &n, stdin);
 	if (nread_char == -1)
 	{
-		/*printf("Exiting shell...\n");*/
-		/*free(str)*/
+		write(STDOUT_FILENO, "\n", 2);
 		exit(1);
 	}
 
