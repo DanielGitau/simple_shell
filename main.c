@@ -16,7 +16,7 @@ int main(void)
 		}
 	while (1)
 	{
-		write(STDOUT_FILENO, "($)", 5);
+		write(STDOUT_FILENO, "#cisfun$", 10);
 		if (execute(argv, token_count) != -1)
 		{
 			free_2d(argv, token_count);
